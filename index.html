@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#082c3a">
+<title>Primeiro Passo | Quiz dos Jovens Aprendizes</title>
+<style>
+:root{--navy:#082c3a;--deep:#061f2a;--orange:#f47724;--teal:#56a4a4;--red:#d83b52;--cream:#f8f1e8}
+*{box-sizing:border-box}body{margin:0;background:var(--deep);font-family:Arial,Helvetica,sans-serif;color:var(--cream);min-height:100vh;display:grid;place-items:center;padding:18px}
+main{width:min(100%,700px);background:var(--navy);border-radius:24px;overflow:hidden;box-shadow:0 18px 55px #0006}
+header{text-align:center;padding:24px 20px 22px;background:radial-gradient(ellipse at 95% 0%,#ed762b 0%,transparent 43%),linear-gradient(145deg,#082b39,#104653)}
+.logo{display:flex;flex-direction:column;align-items:center;font-weight:950;line-height:.91;letter-spacing:.4px;font-size:27px;font-style:italic;text-shadow:0 1px 0 #0002}
+.logo svg{width:112px;height:88px;margin-bottom:3px}
+.logo .passo{font-size:42px;letter-spacing:-1.4px}
+.kicker{font-size:11px;letter-spacing:2px;color:#ffad70;font-weight:bold;margin-top:13px}
+.content{padding:25px 22px 28px}.eyebrow{color:#ff9b52;font-size:11px;letter-spacing:1.5px;font-weight:bold}
+h1{font-size:clamp(25px,6vw,34px);line-height:1.1;margin:9px 0 12px}.desc{color:#c5d5d6;line-height:1.6;font-size:15px}
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}
+.level{min-height:112px;border:1px solid #41636d;background:#123e4b;color:var(--cream);border-radius:14px;padding:13px 8px;text-align:center;cursor:pointer}
+.level strong{display:block;font-size:15px;margin:7px 0}.level small{display:block;color:#bdd0d0;font-size:11px;line-height:1.4}
+.level .emoji{font-size:23px}.level.active{border:2px solid var(--orange);background:#254a50;box-shadow:0 0 0 2px #f4772420}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.stat{background:#123e4b;border:1px solid #285766;border-radius:13px;padding:13px}.stat small{display:block;color:#a9c3c5;font-size:11px}.stat b{display:block;font-size:19px;margin-top:5px}
+button{font:inherit;cursor:pointer}.primary{width:100%;border:0;background:var(--orange);color:#172d34;font-weight:900;border-radius:12px;padding:16px;font-size:15px}.primary:disabled{opacity:.45;cursor:not-allowed}
+.secondary{width:100%;border:1px solid #547984;background:transparent;color:#fff;border-radius:12px;padding:13px;font-weight:bold;margin-top:10px}
+.topline{display:flex;justify-content:space-between;gap:12px;font-size:12px;font-weight:bold;color:#ffad70}.progress{height:8px;background:#244b56;border-radius:9px;margin:12px 0 20px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,var(--teal),var(--orange));width:0;transition:width .25s}
+.question{font-size:20px;line-height:1.4;font-weight:bold;margin:14px 0 18px}.option{width:100%;display:flex;align-items:center;text-align:left;gap:12px;margin:8px 0;padding:13px;border-radius:12px;border:1px solid #41636d;background:#123e4b;color:var(--cream);font-size:15px}.option .letter{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:8px;background:#285866;font-weight:bold}.option.correct{border:2px solid #68c69b;background:#164b43}.option.wrong{border:2px solid #ed7777;background:#50323a}.option:disabled{opacity:1}
+.feedback{margin:14px 0;padding:13px;background:#173f49;border-radius:10px;font-size:14px;line-height:1.5}.feedback.good{border-left:4px solid #68c69b}.feedback.bad{border-left:4px solid #ed7777}
+.result{text-align:center;padding:12px 0}.medal{font-size:58px;margin:14px}.score{font-size:52px;color:#ff9b52;font-weight:950;margin:10px}.hide{display:none!important}
+footer{text-align:center;background:#061f2a;padding:16px 18px;color:#c1d1d0;font-size:12px;line-height:1.6}footer strong{color:#ff9b52}
+@media(max-width:430px){.content{padding:22px 16px}.levels{gap:6px}.level{padding:11px 5px}.level strong{font-size:13px}.level small{font-size:10px}.question{font-size:18px}.logo .passo{font-size:39px}}
+</style></head>
+<body><main>
+<header>
+<div class="logo" aria-label="Primeiro Passo">
+<svg viewBox="0 0 150 112" role="img" aria-label="Símbolo do Primeiro Passo">
+ <circle cx="75" cy="13" r="12" fill="#f8f1e8"/>
+ <path d="M17 70 Q65 49 133 12 Q112 55 78 84 Q54 72 17 70Z" fill="#f47724"/>
+ <path d="M46 82 Q78 70 119 87 Q134 98 137 111 Q102 88 66 96 L39 104Z" fill="#56a4a4"/>
+ <path d="M25 103 Q42 87 61 87 Q47 103 25 111Z" fill="#d83b52"/>
+</svg>
+<span>PRIMEIRO</span><span class="passo">PASSO</span>
+</div>
+<div class="kicker">JOVENS APRENDIZES • DESAFIO DO CONHECIMENTO</div>
+</header>
+<div class="content">
+<section id="intro">
+<div class="eyebrow">APRENDA • JOGUE • EVOLUA</div>
+<h1>Quiz: a evolução das indústrias</h1>
+<p class="desc">Escolha seu nível e teste seus conhecimentos sobre como eram as indústrias antigamente e como funcionam hoje. Cada nível tem perguntas diferentes!</p>
+<div class="eyebrow" style="margin-top:22px">ESCOLHA A DIFICULDADE</div>
+<div class="levels">
+<button class="level active" data-level="facil"><span class="emoji">🌱</span><strong>Fácil</strong><small>Conceitos básicos</small></button>
+<button class="level" data-level="moderado"><span class="emoji">⚙️</span><strong>Moderado</strong><small>Um pouco mais de desafio</small></button>
+<button class="level" data-level="dificil"><span class="emoji">🔥</span><strong>Difícil</strong><small>Teste seus conhecimentos</small></button>
+</div>
+<div class="stats"><div class="stat"><small>PERGUNTAS</small><b>5 por nível</b></div><div class="stat"><small>PONTOS POR ACERTO</small><b>20 pontos</b></div></div>
+<button class="primary" id="start">COMEÇAR O QUIZ →</button>
+</section>
+<section id="game" class="hide">
+<div class="topline"><span id="counter">PERGUNTA 1 DE 5</span><span>⭐ <span id="points">0</span> pts</span></div>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<div class="question" id="question"></div><div id="options"></div>
+<div id="feedback" class="feedback hide"></div>
+<button class="primary" id="next" disabled>PRÓXIMA →</button>
+<button class="secondary" id="back">VOLTAR AO INÍCIO</button>
+</section>
+<section id="result" class="hide result">
+<div class="eyebrow">DESAFIO FINALIZADO</div><div class="medal" id="medal">🏆</div>
+<h1 id="resultTitle">Parabéns!</h1><p class="desc" id="levelResult"></p>
+<div class="score"><span id="finalScore">0</span>/100</div>
+<p class="desc" id="message"></p>
+<div class="stat"><small>RESPOSTAS CORRETAS</small><b id="hits">0 de 5</b></div>
+<button class="primary" id="again" style="margin-top:16px">JOGAR NOVAMENTE ↻</button>
+<button class="secondary" id="change">ESCOLHER OUTRO NÍVEL</button>
+</section>
+</div>
+<footer><strong>PRIMEIRO PASSO • CEARÁ</strong><br>Site desenvolvido pelos Jovens Aprendizes da turma<br><strong>Alimentador de Linha de Produção 01</strong></footer>
+</main>
+<script>
+const bank={
+facil:[
+{q:"Como era a produção nas indústrias antigamente?",a:["Mais manual e lenta","Totalmente automatizada","Feita apenas por robôs","Controlada por computadores"],c:0,e:"Antigamente, grande parte do trabalho era realizada manualmente pelos funcionários."},
+{q:"Qual tecnologia é muito usada nas indústrias atuais?",a:["Carroças","Robôs e computadores","Ferramentas de pedra","Máquinas de escrever"],c:1,e:"Robôs e computadores ajudam a automatizar e controlar a produção moderna."},
+{q:"As indústrias atuais utilizam máquinas para ajudar na produção.",a:["Verdadeiro","Falso"],c:0,e:"As máquinas e os equipamentos são importantes em muitas indústrias atuais."},
+{q:"Qual é uma vantagem das tecnologias modernas?",a:["Aumentar o desperdício","Diminuir a qualidade","Melhorar a eficiência","Impedir a produção"],c:2,e:"A tecnologia pode tornar a produção mais eficiente e melhorar a qualidade."},
+{q:"O que significa produtividade?",a:["Produzir melhor usando bem os recursos","Parar a produção","Desperdiçar materiais","Trabalhar sem planejamento"],c:0,e:"Produtividade é produzir mais ou melhor aproveitando bem os recursos disponíveis."}
+],
+moderado:[
+{q:"Qual foi uma das principais mudanças trazidas pela mecanização das fábricas?",a:["Fim de todos os produtos","Aumento da capacidade de produção","Volta ao trabalho artesanal exclusivo","Fim da necessidade de energia"],c:1,e:"A mecanização permitiu produzir em maior quantidade e com mais rapidez."},
+{q:"O que é automação industrial?",a:["Fazer tudo sem planejamento","Substituir toda a energia por força humana","Usar tecnologias para controlar processos e máquinas","Produzir somente peças artesanais"],c:2,e:"Automação é o uso de sistemas e tecnologias para executar ou controlar etapas da produção."},
+{q:"Por que o controle de qualidade é importante na indústria?",a:["Para aumentar defeitos","Para evitar desperdícios e garantir produtos adequados","Para atrasar as entregas","Para eliminar a manutenção"],c:1,e:"O controle de qualidade ajuda a identificar falhas e garantir que o produto atenda aos padrões."},
+{q:"Qual alternativa mostra uma diferença entre a indústria antiga e a atual?",a:["A atual pode usar sensores e sistemas digitais","A antiga usava inteligência artificial","A atual não precisa de energia","A antiga era sempre totalmente automatizada"],c:0,e:"Sensores e sistemas digitais são exemplos de tecnologias presentes em muitas fábricas atuais."},
+{q:"O que é manutenção preventiva?",a:["Consertar somente depois que tudo quebra","Ignorar sinais de falha","Realizar cuidados programados para evitar problemas","Trocar todas as máquinas diariamente"],c:2,e:"A manutenção preventiva é feita em intervalos planejados para reduzir falhas e paradas."}
+],
+dificil:[
+{q:"O que caracteriza a chamada Indústria 4.0?",a:["Somente o uso de máquinas a vapor","Integração de sistemas digitais, dados, sensores e automação","Retorno exclusivo ao trabalho manual","Produção sem máquinas ou computadores"],c:1,e:"A Indústria 4.0 integra tecnologias digitais, conectividade, análise de dados e automação."},
+{q:"Em uma linha de produção, qual é a principal função de um sensor?",a:["Decorar o equipamento","Aumentar o peso do produto","Captar informações do processo, como temperatura ou posição","Substituir todo o planejamento"],c:2,e:"Sensores coletam informações que podem ser usadas para monitorar e controlar processos."},
+{q:"Uma fábrica produz 200 peças em 4 horas. Qual é sua produção média por hora?",a:["25 peças","50 peças","100 peças","800 peças"],c:1,e:"Dividindo 200 peças por 4 horas, temos uma média de 50 peças por hora."},
+{q:"Qual atitude contribui para reduzir desperdícios em uma indústria?",a:["Planejar o uso de matérias-primas e acompanhar os processos","Ignorar defeitos recorrentes","Deixar máquinas ligadas sem necessidade","Descartar materiais que ainda podem ser aproveitados"],c:0,e:"Planejamento e acompanhamento ajudam a usar melhor os recursos e reduzir perdas."},
+{q:"Por que a qualificação profissional continua importante em fábricas automatizadas?",a:["Porque as máquinas nunca precisam de supervisão","Porque trabalhadores não participam mais da produção","Porque é necessário operar, programar, monitorar e manter tecnologias","Porque a tecnologia elimina toda responsabilidade humana"],c:2,e:"Mesmo com automação, profissionais qualificados são necessários para operar, monitorar e manter os sistemas."}
+]};
+let level='facil',i=0,score=0,correct=0,locked=false;
+const $=id=>document.getElementById(id);
+function screen(id){['intro','game','result'].forEach(x=>$(x).classList.toggle('hide',x!==id))}
+document.querySelectorAll('.level').forEach(b=>b.addEventListener('click',()=>{level=b.dataset.level;document.querySelectorAll('.level').forEach(x=>x.classList.toggle('active',x===b))}));
+function begin(){i=0;score=0;correct=0;screen('game');render()}
+function render(){locked=false;const q=bank[level][i];$('counter').textContent=`PERGUNTA ${i+1} DE 5 • ${level.toUpperCase()}`;$('points').textContent=score;$('bar').style.width=(i/5*100)+'%';$('question').textContent=q.q;$('feedback').className='feedback hide';$('next').disabled=true;$('next').textContent=i===4?'VER RESULTADO →':'PRÓXIMA →';$('options').innerHTML='';q.a.forEach((a,n)=>{let b=document.createElement('button');b.className='option';let l=document.createElement('span');l.className='letter';l.textContent=q.a.length===2?(n===0?'V':'F'):String.fromCharCode(65+n);let t=document.createElement('span');t.textContent=a;b.append(l,t);b.onclick=()=>answer(n);$('options').append(b)})}
+function answer(n){if(locked)return;locked=true;const q=bank[level][i],ok=n===q.c;if(ok){score+=20;correct++}$('points').textContent=score;$('bar').style.width=((i+1)*20)+'%';[...$('options').children].forEach((b,k)=>{b.disabled=true;if(k===q.c)b.classList.add('correct');else if(k===n)b.classList.add('wrong')});$('feedback').className='feedback '+(ok?'good':'bad');$('feedback').textContent=(ok?'✓ Muito bem! Você acertou! ':'✕ Não foi dessa vez. ')+q.e;$('next').disabled=false}
+function finish(){screen('result');$('finalScore').textContent=score;$('hits').textContent=correct+' de 5';$('levelResult').textContent='Nível escolhido: '+({facil:'Fácil',moderado:'Moderado',dificil:'Difícil'}[level]);$('medal').textContent=correct>=4?'🏆':correct>=3?'🥈':'🌟';$('resultTitle').textContent=correct>=4?'Excelente trabalho!':correct>=3?'Muito bem!':'Continue aprendendo!';$('message').textContent=correct>=4?'Você demonstrou um ótimo conhecimento sobre a evolução das indústrias!':correct>=3?'Você está no caminho certo. Continue estudando!':'Cada tentativa é uma oportunidade de aprender. Tente novamente!'}
+$('start').onclick=begin;$('next').onclick=()=>{if(!locked)return;if(i<4){i++;render()}else finish()};$('again').onclick=begin;$('change').onclick=()=>screen('intro');$('back').onclick=()=>screen('intro');
+</script></body></html>
